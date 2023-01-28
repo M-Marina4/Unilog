@@ -4,6 +4,23 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+import { LanguageSelector } from "./language-switch.js";
+import $ from 'jquery';
+
+$(document).ready(function(){
+  $("#includeHtml").load("header.html");
+})
+
+$(document).ready(function(){
+  $("#includeHtml").load("footer.html");
+})
+
+function switchLanguage(language){
+  new LanguageSelector().parse(language)
+}
+  
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -148,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
-});
+})
 
 function updateContent() {
   const elements = document.getElementsByClassName("i18nelement");

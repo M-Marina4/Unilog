@@ -39,37 +39,11 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-       <img src="assets/img/Unilog logo png.png" height="350" width="100">
-      </a>
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Գլխավոր</a></li>
-          <li><a href="about.html">Մեր Մասին</a></li>
-          <li><a href="services.html">Ծառայություններ</a></li>
-          <li><a href="contact.html">Կապ</a></li>
-          <li><a class="get-a-quote" href="get-a-quote.html">Get a Quote</a></li>
-          <select class="form-select" id = "langSelector" name="lang" aria-label=".form-select-sm example">
-            <option selected>ՀԱՅ</option>
-            <option value="1">ԱՆԳ</option>
-            <option value="2">ՌՈՒՍ</option>
-          </select>
-        </ul>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <!-- End Header -->
-
+  <script>
+    $(function() {
+        $("#includeHtml").load("header.html");
+     });
+ </script>
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -78,7 +52,7 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Կապ</h2>
+              <h2 data-translate="contact">Կապ</h2>
             </div>
           </div>
         </div>
@@ -86,8 +60,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Գլխավոր</a></li>
-            <li>Կապ</li>
+            <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+            <li data-translate="contact">Կապ</li>
           </ol>
         </div>
       </nav>
@@ -109,15 +83,15 @@
             <div class="info-item d-flex">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h4>Հասցե:</h4>
-                <p>Քեռու 75, Ք․ Երևան</p>
+                <h4 data-translate="address">Հասցե:</h4>
+                <p data-translate="address-street">Քեռու 75, Ք․ Երևան</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h4>Էլ․ Հասցե:</h4>
+                <h4 data-translate="email">Էլ․ Հասցե:</h4>
                 <p>info@unilog.com</p>
               </div>
             </div><!-- End Info Item -->
@@ -125,7 +99,7 @@
             <div class="info-item d-flex">
               <i class="bi bi-phone flex-shrink-0"></i>
               <div>
-                <h4>Հեռախոսահամար:</h4>
+                <h4 data-translate="phone">Հեռախոսահամար:</h4>
                 <p>+374 77209027</p>
               </div>
             </div><!-- End Info Item -->
@@ -148,9 +122,9 @@
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message" data-translate="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">ՈՒղարկել</button></div>
+              <div class="text-center"><button type="submit" data-translate="send">ՈՒղարկել</button></div>
             </form>
           </div><!-- End Contact Form -->
 
@@ -161,66 +135,11 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/Unilog logo png.png" width="150" height="600">
-          </a>
-         
-          <!-- <div class="social-links d-flex mt-4">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div> -->
-        </div>
-
-        <div class="col-lg-3 col-6 footer-links">
-          <h4>Օգտակար Հղումներ</h4>
-          <ul>
-            <li><a href="#">Գլխավոր</a></li>
-            <li><a href="#">Մեր Մասին</a></li>
-            <li><a href="#">Ծառայություններ</a></li>
-           
-            <li><a href="#">Կապ</a></li>
-          </ul>
-        </div>
-
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Կապ</h4>
-          <p>
-            Քեռու 75 <br>
-            Ք․ Երևան<br>
-            
-          </p>
-          <strong>Հեռախոսահամար:</strong> +374 77209027<br>
-        <p></p>
-          <strong>Էլ․ Հասցե:</strong> info@unilog.am<br>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container mt-4">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">Pamplya</a>
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
-  <!-- End Footer -->
+  <script>
+    $(function() {
+        $("#includeHtml").load("footer.html");
+     });
+ </script>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
