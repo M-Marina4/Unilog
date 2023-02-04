@@ -39,11 +39,35 @@
 
 <body>
 
-  <script>
-    $(function() {
-        $("#includeHtml").load("header.html");
-     });
- </script>
+    <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <img src="assets/img/Unilog logo png.png" height="287" width="100">
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active" data-translate="main">Գլխավոր</a></li>
+        <li><a href="about.html" data-translate="about">Մեր մասին</a></li>
+        <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+        <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        <li><a class="get-a-quote" href="get-a-quote.html" data-translate="quote">ՈՒղարկել հարցում</a></li>
+        <select id="language-select" >
+          <option value="am" selected>Հայ</option>
+          <option value="en">Eng</option>
+          <option value="ru">Рус</option>
+        </select>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
 
   <main id="main">
 
@@ -69,7 +93,7 @@
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    <div id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="row gy-4">
@@ -79,63 +103,31 @@
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3 data-translate="about">Մեր Մասին</h3>
-            <p data-translate="about-text">
-              Յունիլոգ ՍՊԸ ընկերությունը կազմակերպում է միջազգային բեռնափոխադրումներ։ Ունենալով այս ոլորտում 10 ամյա փորձառությամբ աշխատակիցներ և վստահելի գործընկերներ աշխարհի տարբեր մասերում՝ ընկերությունն իր տեղն է զբաղեցրել տեղական և արտերկրյա բեռնափոխադրումների շուկայում։ Թիմային և հետևողական աշխատանքի շնորհիվ մենք այսօր առաջարկում ենք ձեր բեռները փոխադրել բեռնափոխադրման ցանկացած տեսակով․  
-            </p>
-            <p>
-              Ընկերությունը ձեռք է բերել ապրանքային պահեստներ Գերմանիայում, Բուլղարիայում և Մոսկվայում, որոնց շնորհիվ կարողանում է իրականացնել բեռնափոխադրումներ մրցակցային սակագներով:  
-            </p>
-            <p>   Տեղեկացրեք մեզ ձեր բեռի տվյալները և մենք կկազմակերպենք բեռի բարձումն ու ներմուծում / արտահանումը մրցունակ արժեքներով սեղմ ժամկետներում։</p>
+            <p data-translate="aboutText1">Յունիլոգ ՍՊԸ ընկերությունը կազմակրեպում է միջազգային բեռնափոխադրումներ։
+               Ունենալով այս ոլորտում  10 ամյա փորձառությամբ աշխատակիցներ և վստահելի գործընկերներ աշխարհի տարբեր մասերում՝ 
+               ընկերությունն իր տեղն է զբաղեցրել տեղական և արտերկրյա բեռնափոխադրումների շուկայում։
+               Թիմային և հետևողական աշխատանքի շնորհիվ մենք այսօր առաջարկում ենք ձեր բեռները փոխադրել բեռնափոխադրման ցանկացած տեսակով․</p>
+               <ul>
+                <li data-translate="cargo">Ցամաքային</li>
+                <li data-translate="sea">Ծովային</li>
+                <li data-translate="air">Օդային</li>
+               </ul>
+            <p data-translate="aboutText2">
+              Յունիլոգ ՍՊԸ ընկերությունը կազմակերպում է միջազգային բեռնափոխադրումներ։ Ունենալով այս ոլորտում 10 ամյա փորձառությամբ աշխատակիցներ և վստահելի գործընկերներ աշխարհի տարբեր մասերում՝ ընկերությունն իր տեղն է զբաղեցրել տեղական և արտերկրյա բեռնափոխադրումների շուկայում։ Թիմային և հետևողական աշխատանքի շնորհիվ մենք այսօր առաջարկում ենք ձեր բեռները փոխադրել բեռնափոխադրման ցանկացած տեսակով: 
+              Ընկերությունը ձեռք է բերել ապրանքային պահեստներ Գերմանիայում, Բուլղարիայում և Մոսկվայում, որոնց շնորհիվ կարողանում է իրականացնել բեռնափոխադրումներ մրցակցային սակագներով: 
+            </p> 
+            <p data-translate="aboutText3">Տեղեկացրեք մեզ ձեր բեռի տվյալները և մենք կկազմակերպենք բեռի բարձումն ու ներմուծում/արտահանումը մրցունակ արժեքներով սեղմ ժամկետներում։</p>
           </div>
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Stats Counter Section ======= -->
-    <section id="stats-counter" class="stats-counter pt-0">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p data-translate="customers">Հաճախորդներ</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p data-translate="projects">Նախագծեր</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p data-translate="with-you">Ժամ Ձեր Կողքին</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p data-translate="employees">Աշխատողներ</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Stats Counter Section -->
-
+    </div><!-- End About Us Section -->
+    
     
    <!-- ======= Testimonials Section ======= -->
-   <section id="testimonials" class="testimonials">
+   <div id="testimonials" class="testimonials">
     <div class="container">
-      <h1 class="text-white" data-translate="partners">Մեր Գործընկերները</h1>
+      <h1 class="text-white" data-translate="ourPartners">Մեր Գործընկերները</h1>
       <div class="slides-1 swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
       
@@ -193,31 +185,58 @@
               </div>
              
             </div>
-          </div><!-- End testimonial item -->
+          </div>
+          <!-- End testimonial item -->
 
         </div>
         <div class="swiper-pagination"></div>
       </div>
-
     </div>
-  </section><!-- End Testimonials Section -->
+  </div>
+  <!-- End Testimonials Section -->
+ </div>
+</div>
+</div>
+</main>
+<!-- End #main -->
 
+<footer id="footer" class="footer">
 
-          </div>
-
-        </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-info">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/Unilog logo png.png" width="150" height="600">
+        </a>
       </div>
 
-    <!-- </div>
-  </section>End Frequently Asked Questions Section -->
+      <div class="col-lg-3 col-6 footer-links">
+        <h4 data-translate="ref">Օգտակար Հղումներ</h4>
+        <ul>
+          <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+          <li><a href="about.html" data-translate="about">Մեր Մասին</a></li>
+          <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+         
+          <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        </ul>
+      </div>
 
-</main><!-- End #main -->
 
-<script>
-  $(function() {
-      $("#includeHtml").load("footer.html");
-   });
-</script>
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4 data-translate="contact">Կապ</h4>
+        <strong data-translate="phone">Հեռախոսահամար:</strong> +374 77209027<br>
+        <strong data-translate="email">Էլ․ Հասցե:</strong> info@unilog.am<br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <div id="preloader"></div>
@@ -232,6 +251,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/languages.js"></script>
 
 </body>
 

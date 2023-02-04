@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -38,12 +38,36 @@
 </head>
 
 <body>
+     <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-  <script>
-    $(function() {
-      $("#includeHtml").load("header.html");
-   });
-   </script>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <img src="assets/img/Unilog logo png.png" height="287" width="100">
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active" data-translate="main">Գլխավոր</a></li>
+        <li><a href="about.html" data-translate="about">Մեր մասին</a></li>
+        <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+        <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        <li><a class="get-a-quote" href="get-a-quote.html" data-translate="quote">ՈՒղարկել հարցում</a></li>
+        <select id="language-select" >
+          <option value="am" selected>Հայ</option>
+          <option value="en">Eng</option>
+          <option value="ru">Рус</option>
+        </select>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+  
 
   <main id="main">
 
@@ -53,7 +77,7 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2 class="quote">Get a Quote</h2>
+              <h2 data-translate="quote">Ուղարկել հարցում</h2>
            
             </div>
           </div>
@@ -62,8 +86,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html" class="main">Գլխավոր</a></li>
-            <li class="quote">Get a Quote</li>
+            <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+            <li data-translate="quote">Ուղարկել հարցում</li>
           </ol>
         </div>
       </nav>
@@ -79,16 +103,16 @@
 
           <div class="col-lg-7">
             <form action="forms/quote.php" method="post" class="php-email-form">
-              <h3 class="quote">Get a quote</h3>
+              <h3 data-translate="quote">Ուղարկել հարցում</h3>
              
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="departure" class="form-control" placeholder="Երկիր" required>
+                  <input type="text" name="country" class="form-control" placeholder="Երկիր" required>
                 </div>
 
                 <div class="col-md-6">
-                  <input type="text" name="delivery" class="form-control" placeholder="Քաղաք" required>
+                  <input type="text" name="city" class="form-control" placeholder="Քաղաք" required>
                 </div>
 
                 <div class="col-md-6">
@@ -96,11 +120,11 @@
                 </div>
 
                 <div class="col-md-6">
-                  <input type="text" name="dimensions" class="form-control" placeholder="Ծավալ (մ3)" required>
+                  <input type="text" name="dimensions" class="form-control" placeholder="Ծավալ (մ³)" required>
                 </div>
 
                 <div class="col-lg-12">
-                  <h4 class="personal-data">Անձնական Տվյալներ</h4>
+                  <h4 data-translate="personalData">Անձնական Տվյալներ</h4>
                 </div>
 
                 <div class="col-md-12">
@@ -124,7 +148,7 @@
                   <div class="error-message">Failed to send your message!</div>
                   <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
 
-                  <button type="submit" class="sendbtn">ՈՒղարկել</button>
+                  <button type="submit" data-translate="sendbtn">ՈՒղարկել</button>
                 </div>
 
               </div>
@@ -138,11 +162,46 @@
 
   </main><!-- End #main -->
 
-  <script>
-    $(function() {
-        $("#includeHtml").load("footer.html");
-     });
- </script>
+  <!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-info">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/Unilog logo png.png" width="150" height="600">
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-6 footer-links">
+        <h4 data-translate="ref">Օգտակար Հղումներ</h4>
+        <ul>
+          <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+          <li><a href="about.html" data-translate="about">Մեր Մասին</a></li>
+          <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+         
+          <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4 data-translate="contact">Կապ</h4>
+        <strong data-translate="phone">Հեռախոսահամար:</strong> +374 77209027<br>
+        <strong data-translate="email">Էլ․ Հասցե:</strong> info@unilog.am<br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
+    </div>
+  </div>
+
+</footer><!-- End Footer -->
+<!-- End Footer -->
+
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -158,7 +217,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/languages.js"></script>
 </body>
 
 </html>

@@ -38,12 +38,37 @@
 </head>
 
 <body>
+    <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-  <script>
-    $(function() {
-        $("#includeHtml").load("header.html");
-     });
- </script>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <img src="assets/img/Unilog logo png.png" height="287" width="100">
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a id="main" href="index.html" class="active" >Գլխավոր</a></li>
+        <li><a id="about" href="about.html" >Մեր մասին</a></li>
+        <li><a id ="service" href="services.html">Ծառայություններ</a></li>
+        <li><a id="contact" href="contact.html" >Կապ</a></li>
+        <li><a id = "quote" class="get-a-quote" href="get-a-quote.html">ՈՒղարկել հարցում</a></li>
+        <select id="language-select" >
+          <option value="am" selected>Հայ</option>
+          <option value="en">Eng</option>
+          <option value="ru">Рус</option>
+        </select>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+<!-- End Header -->
+
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -83,15 +108,15 @@
             <div class="info-item d-flex">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h4 data-translate="address">Հասցե:</h4>
-                <p data-translate="address-street">Քեռու 75, Ք․ Երևան</p>
+                <h4 data-translate="address">Հասցե`</h4>
+                <p data-translate="addressStreet">Քեռու 75, Ք․ Երևան</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h4 data-translate="email">Էլ․ Հասցե:</h4>
+                <h4 data-translate="email">Էլ․ Հասցե`</h4>
                 <p>info@unilog.com</p>
               </div>
             </div><!-- End Info Item -->
@@ -99,7 +124,7 @@
             <div class="info-item d-flex">
               <i class="bi bi-phone flex-shrink-0"></i>
               <div>
-                <h4 data-translate="phone">Հեռախոսահամար:</h4>
+                <h4 data-translate="phone">Հեռախոսահամար`</h4>
                 <p>+374 77209027</p>
               </div>
             </div><!-- End Info Item -->
@@ -107,7 +132,7 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="./forms/contact.php" method="post" role="form" class="php-email-form" onsubmit="return validateContactForm()">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Անուն" required>
@@ -119,15 +144,14 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Հաղորդագրություն" required></textarea>
               </div>
-              <div class="my-3">
+              <div class="col-md-12 text-center">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message" data-translate="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit" data-translate="send">ՈՒղարկել</button></div>
-            </form>
-          </div><!-- End Contact Form -->
+                <div class="error-message">Failed to send your message!</div>
+                <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
 
+                <button type="submit" data-translate="sendbtn">ՈՒղարկել</button>
+              </div>
+            </form>
         </div>
 
       </div>
@@ -135,11 +159,47 @@
 
   </main><!-- End #main -->
 
-  <script>
-    $(function() {
-        $("#includeHtml").load("footer.html");
-     });
- </script>
+ <!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-info">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/Unilog logo png.png" width="150" height="600">
+        </a>
+      </div>
+
+      <div class="col-lg-3 col-6 footer-links">
+        <h4 data-translate="ref">Օգտակար Հղումներ</h4>
+        <ul>
+          <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+          <li><a href="about.html" data-translate="about">Մեր Մասին</a></li>
+          <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+         
+          <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4 data-translate="contact">Կապ</h4>
+        <strong data-translate="phone">Հեռախոսահամար:</strong> +374 77209027<br>
+        <strong data-translate="email">Էլ․ Հասցե:</strong> info@unilog.am<br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
+    </div>
+  </div>
+
+</footer><!-- End Footer -->
+<!-- End Footer -->
+
+
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -155,7 +215,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 </body>
 
 </html>

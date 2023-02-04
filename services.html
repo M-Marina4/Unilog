@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -38,15 +38,43 @@
 </head>
 
 <body>
-  <main id="main">
+    <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <img src="assets/img/Unilog logo png.png" height="287" width="100">
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active" data-translate="main">Գլխավոր</a></li>
+        <li><a href="about.html" data-translate="about">Մեր մասին</a></li>
+        <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+        <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        <li><a class="get-a-quote" href="get-a-quote.html" data-translate="quote">ՈՒղարկել հարցում</a></li>
+        <select id="language-select" >
+          <option value="am" selected>Հայ</option>
+          <option value="en">Eng</option>
+          <option value="ru">Рус</option>
+        </select>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+  <main id="main">
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2 class="service">Ծառայություններ</h2>
+              <h2 data-translate="service">Ծառայություններ</h2>
             </div>
           </div>
         </div>
@@ -55,7 +83,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html" class="main">Գլխավոր</a></li>
-            <li class="service">Ծառայություններ</li>
+            <li data-translate="service">Ծառայություններ</li>
           </ol>
         </div>
       </nav>
@@ -67,8 +95,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <span class="our-service">Մեր Ծառայությունները</span>
-          <h2 class="our-service">Մեր Ծառայությունները</h2>
+          <span data-translate="ourServices">Մեր Ծառայությունները</span>
+          <h2 data-translate="ourServices">Մեր Ծառայությունները</h2>
 
         </div>
 
@@ -79,7 +107,7 @@
               <div class="card-img">
                 <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Ցամաքային</a></h3>
+              <h3><a href="service-details.html" class="stretched-link" data-translate="cargo">Ցամաքային</a></h3>
               
             </div>
           </div><!-- End Card Item -->
@@ -89,7 +117,7 @@
               <div class="card-img">
                 <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Ծովային</a></h3>
+              <h3><a href="service-details.html" class="stretched-link" data-translate="sea">Ծովային</a></h3>
             
             </div>
           </div><!-- End Card Item -->
@@ -99,14 +127,11 @@
               <div class="card-img">
                 <img src="assets/img/warehousing-service.jpg" alt="" height = "220px" class="img-fluid">
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Օդային</a></h3>
+              <h3><a href="service-details.html" class="stretched-link" data-translate="air">Օդային</a></h3>
              
             </div>
           </div><!-- End Card Item -->
-
-
         </div>
-
       </div>
     </section><!-- End Services Section -->
 
@@ -116,7 +141,7 @@
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
-        <h1 class="text-white" id="our-partners">Մեր Գործընկերները</h1>
+        <h1 class="text-white" data-translate="ourPartners">Մեր Գործընկերները</h1>
         <div class="slides-1 swiper" data-aos="fade-up">
           <div class="swiper-wrapper">
         
@@ -179,19 +204,54 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Testimonials Section -->
+  </div>
+ </div>
+</div>
+</main>
+<!-- End #main -->
 
-            </div>
+  <footer id="footer" class="footer">
 
-          </div>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/Unilog logo png.png" width="150" height="600">
+          </a>
         </div>
-
-      <!-- </div>
-    </section>End Frequently Asked Questions Section -->
-
-  </main><!-- End #main -->
+  
+        <div class="col-lg-3 col-6 footer-links">
+          <h4 data-translate="ref">Օգտակար Հղումներ</h4>
+          <ul>
+            <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+            <li><a href="about.html" data-translate="about">Մեր Մասին</a></li>
+            <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+           
+            <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+          </ul>
+        </div>
+  
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4 data-translate="contact">Կապ</h4>
+          <strong data-translate="phone">Հեռախոսահամար:</strong> +374 77209027<br>
+          <strong data-translate="email">Էլ․ Հասցե:</strong> info@unilog.am<br>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+  
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -207,7 +267,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/languages.js"></script>
 </body>
 
 </html>

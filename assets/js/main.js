@@ -1,25 +1,3 @@
-/**
-* Template Name: Logis - v1.3.0
-* Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-import { LanguageSelector } from "./language-switch.js";
-import $ from 'jquery';
-
-$(document).ready(function(){
-  $("#includeHtml").load("header.html");
-})
-
-$(document).ready(function(){
-  $("#includeHtml").load("footer.html");
-})
-
-function switchLanguage(language){
-  new LanguageSelector().parse(language)
-}
-  
 
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
@@ -176,29 +154,41 @@ function updateContent() {
   }
 }
 
-async function i18Loader() {
-  const langs = ["en", "ru"];
-  const jsons = await Promise.all(
-    langs.map((l) => fetch("/src/i18/" + l + ".json").then((r) => r.json()))
-  );
-  const res = langs.reduce((acc, l, idx) => {
-    acc[l] = { translation: jsons[idx] };
-    return acc;
-  }, {});
-  await i18next.init({
-    lng: "en",
-    debug: true,
-    resources: res
-  });
-  updateContent();
-  i18next.on("languageChanged", () => {
-    updateContent();
-  });
-  const langSelector = document.getElementById("langSelector");
-  langSelector.removeAttribute("disabled");
-  langSelector.addEventListener("change", (e) => {
-    i18next.changeLanguage(e.target.value);
-  });
-}
 
-i18Loader()
+const servicesList = document.querySelector('.services-list');
+const airImg = document.querySelector('#airImg')
+const seaImg = document.querySelector('#seaImg')
+const cargoImg = document.querySelector('#cargoImg')
+const cargoDiv = document.querySelector('#cargoItem');
+const seaDiv = document.querySelector('#seaItem');
+const airDiv = document.querySelector('#airItem');
+
+servicesList.addEventListener('click', function(event) {
+  const clickedLink = event.target;
+  const translate = clickedLink.getAttribute('data-translate');
+
+  document.querySelector('.active').classList.remove('active');
+  clickedLink.classList.add('active');
+
+  cargoDiv.style.display = 'none';
+  cargoImg.style.display = 'none';
+  seaImg.style.display = 'none';
+  airImg.style.display = 'none';
+  seaDiv.style.display = 'none';
+  airDiv.style.display = 'none';
+
+  if (translate === 'cargo') {
+    cargoDiv.style.display = 'block';
+    cargoImg.style.display = 'block';
+  } else if (translate === 'sea') {
+    seaDiv.style.display = 'block';
+    seaImg.style.display = 'block'
+  } else if (translate === 'air') {
+    airDiv.style.display = 'block';
+    airImg.style.display = 'block'
+  }
+});
+
+
+
+

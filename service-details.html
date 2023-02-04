@@ -38,21 +38,45 @@
 </head>
 
 <body>
-  <script>
-    $(function() {
-        $("#includeHtml").load("header.html");
-     });
- </script>
+   <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <img src="assets/img/Unilog logo png.png" height="287" width="100">
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active" data-translate="main">Գլխավոր</a></li>
+        <li><a href="about.html" data-translate="about">Մեր մասին</a></li>
+        <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+        <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+        <li><a class="get-a-quote" href="get-a-quote.html" data-translate="quote">ՈՒղարկել հարցում</a></li>
+        <select id="language-select" >
+          <option value="am" selected>Հայ</option>
+          <option value="en">Eng</option>
+          <option value="ru">Рус</option>
+        </select>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header>
+<!-- End Header -->
 
 <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Ցամաքային Բեռնափոխադրումներ</h2>
+              <h2 data-translate="cargoTrans">Ցամաքային Բեռնափոխադրումներ</h2>
             </div>
           </div>
         </div>
@@ -60,8 +84,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html" class="main">Գլխավոր</a></li>
-            <li>Ցամաքային Բեռնափոխադրումներ</li>
+            <li><a href="index.html" class="main" data-translate="main">Գլխավոր</a></li>
+            <li data-translate="cargoTrans">Ցամաքային Բեռնափոխադրումներ</li>
           </ol>
         </div>
       </nav>
@@ -86,35 +110,63 @@
 
           <div class="col-lg-8">
             <img src="assets/img/service-details.jpg" alt="" class="img-fluid services-img">
-            <h3>Ցամաքային Բեռնափոխադրումներ</h3>
+            <h3 data-translate="cargoTrans">Ցամաքային Բեռնափոխադրումներ</h3>
             <p>
-              Ընկերություը կազմակերպում է բեռի բարձումը նշված հասցեից՝ մշակելով փոխադրման առավել արագ  և ապահով երթուղիները և առաջարկում է հետևյալը․
-
+              Ընկերությունը կազմակերպում է բեռի բարձումը նշված հասցեից՝ մշակելով փոխադրման առավել արագ և ապահով երթուղիները և առաջարկում է հետևյալը.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Տենտ բեռնատարներ</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Սառնարան բեռնատարներ</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Թերմոս բեռնատարներ</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>120մ3 ծավալով բեռնատարներ</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Վտանգավոր (ADR) բեռների փոխադրում</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ալկոհոլային խմիչքների փոխադրում</span></li>
-
-            </ul>
-           
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans1">Տենտ բեռնատարներ</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans2">Սառնարան բեռնատարներ</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans3">Թերմոս բեռնատարներ</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans4">120մ3 ծավալով բեռնատարներ</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans5">Վտանգավոր (ADR) բեռների փոխադրում</span></li>
+              <li><i class="bi bi-check-circle"></i> <span data-translate="trans6">Ալկոհոլային խմիչքների փոխադրում</span></li>
+            </ul>     
           </div>
-
         </div>
-
       </div>
     </section><!-- End Service Details Section -->
 
   </main><!-- End #main -->
+  <footer id="footer" class="footer">
 
-  <script>
-    $(function() {
-        $("#includeHtml").load("footer.html");
-     });
- </script>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/Unilog logo png.png" width="150" height="600">
+          </a>
+        </div>
+  
+        <div class="col-lg-3 col-6 footer-links">
+          <h4 data-translate="ref">Օգտակար Հղումներ</h4>
+          <ul>
+            <li><a href="index.html" data-translate="main">Գլխավոր</a></li>
+            <li><a href="about.html" data-translate="about">Մեր Մասին</a></li>
+            <li><a href="services.html" data-translate="service">Ծառայություններ</a></li>
+           
+            <li><a href="contact.html" data-translate="contact">Կապ</a></li>
+          </ul>
+        </div>
+  
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4 data-translate="contact">Կապ</h4>
+          <strong data-translate="phone">Հեռախոսահամար:</strong> +374 77209027<br>
+          <strong data-translate="email">Էլ․ Հասցե:</strong> info@unilog.am<br>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Unilog</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+  
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -131,7 +183,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+<script src="assets/js/languages.js"></script>
 </body>
 
 </html>
