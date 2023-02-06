@@ -644,10 +644,9 @@ section {
 }
 
 .aboutImg {
-  margin-top: 80px;
-  margin-left: 100px;
-  opacity: 0.65;
-  max-width: 350px;
+  margin-top: 20px;
+  margin-left: 50px;
+  max-width: 500px;
   width: auto;
   height: auto;
 }
@@ -1473,11 +1472,6 @@ section {
   font-weight: 700;
   border-color: var(--color-primary);
 }
-
-/*
-.service-details .services-list a:hover {
-  border-color: var(--color-primary);
-}*/
 
 .service-details .services-img {
   margin-bottom: 10px;

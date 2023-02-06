@@ -37,7 +37,8 @@ const translations = {
     cargotrans6: 'Transportation of alcoholic beverages',
     door: 'Door to door',
     airport: 'Airport to аirport',
-    personalData: 'Personal data'
+    personalData: 'Personal data',
+    addressStreet: 'Qeru Street 75, Yerevan'
   },
 
 	am: {
@@ -64,7 +65,7 @@ const translations = {
     phone: 'Հեռախոսահամար',
     email: 'Էլ․ հասցե՝',
     sendbtn: 'Ուղարկել',
-    aboutText1: 'Յունիլոգ ՍՊԸ ընկերությունը կազմակրեպում է միջազգային բեռնափոխադրումներ։ Ունենալով այս ոլորտում  10 ամյա փորձառությամբ աշխատակիցներ և վստահելի գործընկերներ աշխարհի տարբեր մասերում՝ ընկերությունն իր տեղն է զբաղեցրել տեղական և արտերկրյա բեռնափոխադրումների շուկայում։ Թիմային և հետևողական աշխատանքի շնորհիվ մենք այսօր առաջարկում ենք ձեր բեռները փոխադրել բեռնափոխադրման ցանկացած տեսակով․',
+    aboutText1: 'Յունիլոգ ՍՊԸ ընկերությունը կազմակերպում է միջազգային բեռնափոխադրումներ։ Ունենալով այս ոլորտում  10 ամյա փորձառությամբ աշխատակիցներ և վստահելի գործընկերներ աշխարհի տարբեր մասերում՝ ընկերությունն իր տեղն է զբաղեցրել տեղական և արտերկրյա բեռնափոխադրումների շուկայում։ Թիմային և հետևողական աշխատանքի շնորհիվ մենք այսօր առաջարկում ենք ձեր բեռները փոխադրել բեռնափոխադրման ցանկացած տեսակով․',
     aboutText2: 'Ընկերությունը ձեռք է բերել ապրանքային պահեստներ Գերմանիայում, Բուլղարիայում և Մոսկվայում, որոնց շնորհիվ կարողանում է իրականացնել բեռնափոխադրումներ մրցակցային սակագներով:',
     aboutText3: 'Տեղեկացրեք մեզ ձեր բեռի տվյալները և մենք կկազմակերպենք բեռի բարձումն ու ներմուծում / արտահանումը մրցունակ արժեքներով սեղմ ժամկետներում։',
     airDesc: 'Շտապ բեռների հուսալի փոխադրման տարբերակ է օդային բեռնափոխադրումը։ Ունենալով վստահելի գործընկերների ցանց՝ կկազմակերպենք Ձեր բեռի ավիափոխադրումը աշխարհի ցանկացած կետից դեպի Հայաստան և հակառակ ուղղությամբ.',
@@ -73,12 +74,13 @@ const translations = {
     cargotrans1: 'Տենտ բեռնատարներ',
     cargotrans2: 'Սառնարան բեռնատարներ',
     cargotrans3: 'Թերմոս բեռնատարներ',
-    cargotrans4: '120մ³ ծավալով բեռնատարներ',
+    cargotrans4: '120 մ³ ծավալով բեռնատարներ',
     cargotrans5: 'Վտանգավոր (ADR) բեռների փոխադրում',
     cargotrans6: 'Ալկոհոլային խմիչքների փոխադրում',
     door: 'Դռնից դուռ',
     airport: 'Օդանավակայանից օդանավակայան',
-    personalData: 'Անձնական տվյալներ'
+    personalData: 'Անձնական տվյալներ',
+    addressStreet: 'Քեռու 75, ք․ Երևան'
   },
 	ru: {
 		main: 'Главная', 
@@ -118,7 +120,8 @@ const translations = {
     cargotrans6: 'Перевозка алкогольных напитков',
     door: 'От двери до двери',
     airport: 'С аэропорта до аэропорта',
-    personalData: 'Личные данные'
+    personalData: 'Личные данные',
+    addressStreet: 'улица Керу 75, г.Ереван'
   }
 };
 
@@ -130,8 +133,6 @@ const placeholderTexts = {
     phone: "Phone",
     country: "Country",
     city: "City",
-    weight: "Weight(kg)",
-    dimensions: "Volume (m³)",
     personalData: "Personal info"
   },
   am: {
@@ -141,8 +142,6 @@ const placeholderTexts = {
     phone: "Հեռախոսահամար",
     country: "Երկիր",
     city: "Քաղաք",
-    weight: "Քաշ (կգ)",
-    dimensions: "Ծավալ (մ³)",
     personalData: "Անձնական տվյալներ"
   },
   ru: {
@@ -152,8 +151,6 @@ const placeholderTexts = {
     phone: "Телефон",
     country: "Страна",
     city: "Город",
-    weight: "Масса (кг)",
-    dimensions: "Объем (м³)",
     personalData: "Անձնական տվյալներ"
   }
 };
@@ -167,8 +164,6 @@ function changePlaceholderTexts(language) {
   const phone =  document.querySelector('[name="phone"]');
   const country = document.querySelector('[name="country"]');
   const city = document.querySelector('[name="city"]');
-  const weight = document.querySelector('[name="weight"]');
-  const dimensions = document.querySelector('[name="dimensions"]');
 
   // Update the placeholder text for each field
   nameField.forEach((element)=>{
@@ -183,8 +178,6 @@ function changePlaceholderTexts(language) {
   phone.placeholder = placeholderTexts[language].phone;
   country.placeholder = placeholderTexts[language].country;
   city.placeholder = placeholderTexts[language].city;
-  weight.placeholder = placeholderTexts[language].weight;
-  dimensions.placeholder = placeholderTexts[language].dimensions
 }
 
 function translate(currentLanguage){
